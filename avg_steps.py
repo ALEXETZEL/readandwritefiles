@@ -17,8 +17,7 @@ month=1
 
 outfile.write('Month, Average Steps\n')
 for x in csvfile:
-    a+=float(x[1])
-    i+=1
+    print(i)
     if float(x[0])!=month:
         month-=1
         avg=(a/i)
