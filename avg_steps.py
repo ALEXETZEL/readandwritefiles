@@ -17,6 +17,7 @@ month=1
 
 outfile.write('Month, Average Steps\n')
 for x in csvfile:
+    print(x)
     print(i)
     if float(x[0])!=month:
         month-=1
@@ -30,5 +31,9 @@ for x in csvfile:
     if float(x[0])==month:
         a+=float(x[1])
         i+=1
-    
+month-=1
+avg=(a/i)
+avg=format(avg,',.2f')
+print(prof_b[month]+', '+str(avg))
+outfile.write(prof_b[month]+', '+ str(avg)+'\n')
 outfile.close()
